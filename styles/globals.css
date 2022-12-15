@@ -552,7 +552,12 @@ font-weight: 600;
   }
   .quantity-desc .plus{
     color: rgb(49, 168, 49);
-  
+  }
+
+  .prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
   
   .maylike-products-wrapper{

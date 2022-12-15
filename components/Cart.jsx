@@ -97,7 +97,7 @@ const Cart = () => {
                         >
                           <AiOutlineMinus />
                         </span>
-                        <span className="num">{item.quantity}</span>
+                        <span className="num prevent-select">{item.quantity}</span>
                         <span
                           className="plus"
                           onClick={() =>
@@ -122,12 +122,12 @@ const Cart = () => {
         </div>
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
-            <div className="total">
+            <div className="total prevent-select">
               <h3>Total:</h3>
               <h3>{totalPrice}đ</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick={handleCheckout}>
+              <button type="button" className="btn prevent-select" onClick={handleCheckout}>
                 Pay for your sins
               </button>
             </div>

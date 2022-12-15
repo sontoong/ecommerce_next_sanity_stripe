@@ -66,7 +66,7 @@ const ProductDetails = ({ product, products }) => {
               <span className="minus" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
-              <span className="num">{qty}</span>
+              <span className="num prevent-select">{qty}</span>
               <span className="plus" onClick={incQty}>
                 <AiOutlinePlus />
               </span>
@@ -75,19 +75,19 @@ const ProductDetails = ({ product, products }) => {
           <div className="buttons">
             <button
               type="button"
-              className="add-to-cart"
+              className="add-to-cart prevent-select"
               onClick={() => onAdd(product, qty)}
             >
               Add to Pocket
             </button>
-            <button type="button" className="buy-now" onClick={handleBuyNow}>
+            <button type="button" className="buy-now prevent-select" onClick={handleBuyNow}>
               BUY NOW1!!
             </button>
           </div>
         </div>
       </div>
 
-      <div className="maylike-products-wrapper">
+      <div className="maylike-products-wrapper prevent-select">
         <h2>You may also like</h2>
         <div className="marquee" onMouseEnter={() => setIndex(0)}>
           <div className="maylike-products-container track">
