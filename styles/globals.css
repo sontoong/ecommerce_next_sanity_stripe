@@ -336,7 +336,7 @@ font-weight: 600;
   .product-container{
     margin-top: 15px;
     overflow: auto;
-  max-height: 70vh;
+  max-height: 60vh;
   padding: 20px 10px;
   }
   .product{
@@ -382,11 +382,12 @@ font-weight: 600;
     border: none;
   }
   .cart-bottom{
+    background-color: white;
     position: absolute;
     bottom: 12px;
-    right: 5px;
-  width: 100%;
-  padding: 30px 65px;
+    left: 5px;
+  max-width: 100%;
+  padding: 30px 95px;
   
   }
   
@@ -419,20 +420,22 @@ font-weight: 600;
    margin: 40px;
    margin-top: 60px;
    color: #324d67;
-  
-  }
+   max-width: 100vw;
 
+  }
   .product-detail-container>div {
-    width: 100%;
+    width: 50%;
   }
   .image-container {
-    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .product-detail-image{
     border-radius: 15px;
     background-color: #ebebeb;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 1/1.1;
     cursor: pointer;
     transition: .3s ease-in-out;
   }
@@ -445,7 +448,7 @@ font-weight: 600;
     gap: 10px;
     margin-top: 20px;
     overflow-x: auto;
-    max-width: 100vw;
+    max-width: 50vw;
   }
   .small-image{
     position: relative;
@@ -540,10 +543,10 @@ font-weight: 600;
     cursor: pointer;
   }
   .quantity-desc .minus{
-    border-right: 1px solid gray;
     color: #f02d34;
   }
   .quantity-desc .num{
+    border-left: 1px solid gray;
     border-right: 1px solid gray;
     font-size: 20px;
   }
@@ -627,7 +630,21 @@ font-weight: 600;
 
  @media screen and (max-width: 650px) {
   .footer-banner-container img {
-    transform: translate(-7%, 80%) !important;
+    transform: translate(-14%, 80%) !important;
+  }
+
+  .product-detail-container>div {
+    width: 100%;
+    max-width: 100%;
+  }
+  .image-container {
+    max-width: 100%;
+  }
+  .product-detail-image {
+    width: 100%;
+  }
+  .small-images-container {
+    max-width: 100vw;
   }
  }
 
@@ -771,6 +788,11 @@ font-weight: 600;
   width: 300px;
   margin: auto;
 }
+}
+@media screen and (min-width: 859px) {
+  .product-detail-image {
+    height: 370px;
+  }
 }
 @media screen and (min-width: 1150px) {
   .footer-banner-container img {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 import { client, urlFor } from "../../lib/client";
@@ -22,7 +22,7 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <div className="image-container">
             <img
-              src={urlFor(image && image[index])}
+              src={urlFor(image && image[index]).url()}
               className="product-detail-image"
             />
           </div>
@@ -89,7 +89,7 @@ const ProductDetails = ({ product, products }) => {
 
       <div className="maylike-products-wrapper">
         <h2>You may also like</h2>
-        <div className="marquee">
+        <div className="marquee" onMouseEnter={() => setIndex(0)}>
           <div className="maylike-products-container track">
             {products.map((item) => (
               <Product key={item._id} product={item} />
